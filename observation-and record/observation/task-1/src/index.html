@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+</head>
+<body>
+    <header>
+        <h1>College Information Portal</h1>
+        <p> Welcome to our College Information Portal.
+        This webpage demonstrates HTML5 concepts including
+        text formatting, tables, forms, multimedia,
+        semantic elements, and HTML5 input types.</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#registration">registration</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <article>
+            <h2>About Our College</h2>
+            <p>Welcome to<b>ANITS (Anil Neerukonda Institute of Technology and Sciences)
+                Our college is committed to providing
+               <i>quality education</i> and encouraging
+               <u>innovation and research</u>.
+            </b></p>
+            <h3 id="courses">Popular Courses</h3>
+
+        <ol>
+
+            <li>Computer Science and Engineering</li>
+
+            <li>Artificial Intelligence and Machine Learning</li>
+
+            <li>Electronics and Communication Engineering</li>
+
+            <li>Mechanical Engineering</li>
+
+        </ol>
+        <h3>Campus Facilities</h3>
+
+        <ul>
+
+            <li>Central Library</li>
+
+            <li>Digital Classrooms</li>
+
+            <li>Sports Complex</li>
+
+            <li>Hostel Facilities</li>
+
+        </ul>
+        <h3>Useful Links</h3>
+
+        <p>
+
+        <a href="https://anits.edu.in" target="_blank">
+            Visit ANITS Official Website
+        </a>
+
+        </p>
+
+        <p>
+
+        <a href="https://www.google.com" target="_blank">
+        Visit Google
+        </a>
+
+        </p>
+        </article>
+    </section>
+    <section>
+
+    <h2>Student Details</h2>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+
+            <th>Roll No</th>
+
+            <th>Name</th>
+
+            <th>Branch</th>
+
+            <th>Email</th>
+
+        </tr>
+
+        <tr>
+
+            <td>101</td>
+
+            <td>Bhuvan Teja</td>
+
+            <td>AIML</td>
+
+            <td>bhuvan@gmail.com</td>
+
+        </tr>
+
+        <tr>
+
+            <td>102</td>
+
+            <td>Rahul</td>
+
+            <td>CSE</td>
+
+            <td>rahul@gmail.com</td>
+
+        </tr>
+
+        <tr>
+
+            <td>103</td>
+
+            <td>Priya</td>
+
+            <td>ECE</td>
+
+            <td>priya@gmail.com</td>
+
+        </tr>
+
+    </table>
+
+</section>
+<section>
+
+    <h2>College Gallery</h2>
+
+    <img
+        src="images/college-logo.png"
+        alt="College Logo"
+        width="180">
+
+    <br><br>
+
+    <img
+        src="images/campus.jpg"
+        alt="College Campus"
+        width="500">
+
+</section>
+<section id="registration">
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+
+        <label for="name">Student Name:</label><br>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required>
+
+        <br><br>
+
+        <label for="email">Email:</label><br>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required>
+
+        <br><br>
+
+        <label for="password">Password:</label><br>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            required>
+
+        <br><br>
+
+        <label>Gender:</label><br>
+
+        <input
+            type="radio"
+            id="male"
+            name="gender">
+
+        <label for="male">Male</label>
+
+        <input
+            type="radio"
+            id="female"
+            name="gender">
+
+        <label for="female">Female</label>
+
+        <input
+            type="radio"
+            id="other"
+            name="gender">
+
+        <label for="other">Other</label>
+
+        <br><br>
+
+        <label>Hobbies:</label><br>
+
+        <input
+            type="checkbox"
+            id="reading">
+
+        <label for="reading">Reading</label>
+
+        <input
+            type="checkbox"
+            id="sports">
+
+        <label for="sports">Sports</label>
+
+        <input
+            type="checkbox"
+            id="music">
+
+        <label for="music">Music</label>
+
+        <br><br>
+
+        <label for="branch">Branch:</label><br>
+
+        <select id="branch">
+
+            <option>AIML</option>
+
+            <option>CSE</option>
+
+            <option>ECE</option>
+
+            <option>EEE</option>
+
+            <option>Mechanical</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="comments">Comments:</label><br>
+
+        <textarea
+            id="comments"
+            rows="5"
+            cols="40"
+            placeholder="Enter your comments"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Reset">
+
+    </form>
+
+</section>
+<section>
+
+    <h2>HTML5 Input Types</h2>
+
+    <form>
+
+        <label for="dob">Date of Birth:</label><br>
+
+        <input
+            type="date"
+            id="dob">
+
+        <br><br>
+
+        <label for="age">Age:</label><br>
+
+        <input
+            type="number"
+            id="age"
+            min="17"
+            max="100">
+
+        <br><br>
+
+        <label for="favcolor">Favorite Color:</label><br>
+
+        <input
+            type="color"
+            id="favcolor">
+
+        <br><br>
+
+        <label for="skill">Programming Skill Level:</label><br>
+
+        <input
+            type="range"
+            id="skill"
+            min="0"
+            max="100">
+
+    </form>
+
+</section>
+<section>
+
+    <h2>College Audio</h2>
+
+    <audio controls>
+
+        <source
+            src="audio/college-song.mp3"
+            type="audio/mpeg">
+
+        Your browser does not support audio.
+
+    </audio>
+
+</section>
+<section>
+
+    <h2>Campus Tour Video</h2>
+
+    <video
+        width="500"
+        controls>
+
+        <source
+            src="video/campus-tour.mp4"
+            type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+</section>
+<section>
+
+    <h2>College Location</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=ANITS+Visakhapatnam&output=embed"
+        width="600"
+        height="350"
+        style="border:0;"
+        loading="lazy"
+        title="ANITS Location">
+    </iframe>
+
+</section>
+<footer id="contact">
+
+    <hr>
+
+    <p>
+
+        © 2026 College Information Portal
+
+    </p>
+
+    <p>
+
+        Developed for Full Stack Web Development Lab Assignment
+
+    </p>
+
+</footer>
+</body>
+</html>

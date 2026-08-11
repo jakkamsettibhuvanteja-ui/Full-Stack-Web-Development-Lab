@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(to right,#dbeafe,#f5f3ff);
+
+}
+
+/* Header */
+
+header{
+
+    background:linear-gradient(90deg,#2563eb,#9333ea);
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    text-shadow:2px 2px 5px black;
+
+}
+
+/* Navigation */
+
+nav{
+
+    background:#222;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:20px;
+
+    font-size:18px;
+
+    transition:0.3s;
+
+}
+
+nav a:hover{
+
+    color:yellow;
+
+    text-decoration:underline;
+
+}
+
+/* Canvas */
+
+.canvas-section{
+
+    text-align:center;
+
+    margin:40px;
+
+}
+
+canvas{
+
+    border:4px solid black;
+
+    border-radius:15px;
+
+    background:white;
+
+    box-shadow:0px 5px 15px gray;
+
+}
+
+/* Cards */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:300px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    border:2px solid #ddd;
+
+    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+
+    text-align:center;
+
+    transition:0.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+
+}
+
+.card h2{
+
+    font-family:Georgia;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+/* Buttons */
+
+button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+}
+
+button:hover{
+
+    background:#9333ea;
+
+    transform:scale(1.1);
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    background:#111;
+
+    color:white;
+
+    padding:20px;
+
+}
