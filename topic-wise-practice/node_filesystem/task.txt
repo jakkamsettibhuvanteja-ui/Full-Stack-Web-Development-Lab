@@ -1,0 +1,3 @@
+Hello, this is my first Node.js file.
+I am learning File Handling.
+This line was appended using Node.js.

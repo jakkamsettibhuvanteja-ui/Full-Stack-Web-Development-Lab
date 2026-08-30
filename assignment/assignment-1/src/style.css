@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    width: 700px;
+    margin: auto;
+    background-color: rgb(126, 233, 255);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#displayBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#displayBtn:hover {
+    background-color: #555;
+}
+
+.inheritance-card {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fe8411;
+}
+
+.inheritance-card h2 {
+    margin-top: 0;
+}
+
+.inheritance-card p {
+    text-align: left;
+    font-size: 16px;
+    margin: 8px 0;
+}
