@@ -1,0 +1,12 @@
+{
+    "name": "npm-package-demo",
+    "version": "1.0.0",
+    "description": "Demonstration of NPM and package.json",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    }
+}

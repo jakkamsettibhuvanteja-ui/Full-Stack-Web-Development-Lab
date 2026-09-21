@@ -1,112 +1,77 @@
-const taskInput = document.getElementById("taskInput");
-const addTaskBtn = document.getElementById("addTaskBtn");
-const taskList = document.getElementById("taskList");
-const emptyMessage = document.getElementById("emptyMessage");
-
-
-addTaskBtn.addEventListener("click", function () {
-
-
-    const taskText = taskInput.value.trim();
-
-
-
-    if (taskText === "") {
-        alert("Please enter a task.");
-        return;
-    }
-
-
-
-    const taskItem = document.createElement("li");
-
-    taskItem.className = "task-item";
-
-
-
-    const taskTextElement = document.createElement("span");
-
-    taskTextElement.className = "task-text";
-
-    taskTextElement.textContent = taskText;
-
-
-
-    const buttonGroup = document.createElement("div");
-
-    buttonGroup.className = "button-group";
-
-
-
-    const completeButton = document.createElement("button");
-
-    completeButton.textContent = "Complete";
-
-    completeButton.className = "complete-btn";
-
-
-
-    const deleteButton = document.createElement("button");
-
-    deleteButton.textContent = "Delete";
-
-    deleteButton.className = "delete-btn";
-
-
-
-    completeButton.addEventListener("click", function () {
-
-        taskTextElement.classList.toggle("completed");
-
-    });
-
-
-
-    deleteButton.addEventListener("click", function () {
-
-        taskItem.remove();
-
-        checkEmptyList();
-
-    });
-
-
-
-    buttonGroup.appendChild(completeButton);
-
-    buttonGroup.appendChild(deleteButton);
-
-
-
-    taskItem.appendChild(taskTextElement);
-
-    taskItem.appendChild(buttonGroup);
-
-
-
-    taskList.appendChild(taskItem);
-
-
-
-    taskInput.value = "";
-
-
-    checkEmptyList();
-
-});
-
-
-
-function checkEmptyList() {
-
-    if (taskList.children.length === 0) {
-
-        emptyMessage.style.display = "block";
-
-    } else {
-
-        emptyMessage.style.display = "none";
-
+class Student {
+
+    constructor(name, rollNumber, department, cgpa) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.department = department;
+        this.cgpa = cgpa;
     }
 
 }
+
+const nameInput = document.getElementById("name");
+const rollInput = document.getElementById("roll");
+const departmentInput = document.getElementById("department");
+const cgpaInput = document.getElementById("cgpa");
+
+const displayButton = document.getElementById("displayBtn");
+const profileDiv = document.getElementById("profile");
+
+
+displayButton.addEventListener("click", function () {
+
+    const name = nameInput.value;
+    const rollNumber = rollInput.value;
+    const department = departmentInput.value;
+    const cgpa = cgpaInput.value;
+
+    if (name === "" || rollNumber === "" || department === "" || cgpa === "") {
+        alert("Please enter all student details.");
+        return;
+    }
+    
+    const student = new Student(
+        name,
+        rollNumber,
+        department,
+        cgpa
+    );
+
+
+    profileDiv.innerHTML = "";
+
+
+    const profileCard = document.createElement("div");
+    profileCard.className = "profile-card";
+
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Student Profile";
+
+
+    const namePara = document.createElement("p");
+    namePara.textContent = "Name : " + student.name;
+
+
+    const rollPara = document.createElement("p");
+    rollPara.textContent = "Roll No : " + student.rollNumber;
+
+
+    const departmentPara = document.createElement("p");
+    departmentPara.textContent = "Department : " + student.department;
+
+
+    const cgpaPara = document.createElement("p");
+    cgpaPara.textContent = "CGPA : " + student.cgpa;
+
+
+    profileCard.appendChild(heading);
+    profileCard.appendChild(namePara);
+    profileCard.appendChild(rollPara);
+    profileCard.appendChild(departmentPara);
+    profileCard.appendChild(cgpaPara);
+
+
+    profileDiv.appendChild(profileCard);
+
+});

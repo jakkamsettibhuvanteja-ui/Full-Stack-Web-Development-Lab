@@ -1,43 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Student Profile</title>
+    <title>My Styled Webpage</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- Header -->
 
-        <h1>Student Profile</h1>
+    <header>
+        <h1>My Styled Webpage</h1>
+        <p>HTML5 Canvas and CSS3 Styling Assignment</p>
+    </header>
 
-        <div class="form">
+    <!-- Navigation -->
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
 
-            <label for="roll">Roll Number:</label>
-            <input type="text" id="roll" placeholder="Enter roll number">
+    <!-- Canvas -->
 
-            <label for="department">Department:</label>
-            <input type="text" id="department" placeholder="Enter department">
+    <section class="canvas-section">
 
-            <label for="cgpa">CGPA:</label>
-            <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA">
+        <h2>HTML5 Canvas Drawing</h2>
 
-            <button id="displayBtn">Display Student Profile</button>
+        <canvas id="myCanvas" width="700" height="350"></canvas>
+
+    </section>
+
+    <!-- Cards -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h2>HTML5</h2>
+
+            <p>
+                HTML5 provides the structure of modern web pages.
+            </p>
+
+            <button>Learn More</button>
 
         </div>
 
-        <div id="profile"></div>
+        <div class="card">
 
-    </div>
+            <h2>CSS3</h2>
+
+            <p>
+                CSS3 makes websites attractive using colors, layouts, shadows and animations.
+            </p>
+
+            <button>Explore</button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Canvas</h2>
+
+            <p>
+                Canvas allows drawing graphics directly using JavaScript.
+            </p>
+
+            <button>View Demo</button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 My Styled Webpage | Full Stack Assignment
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

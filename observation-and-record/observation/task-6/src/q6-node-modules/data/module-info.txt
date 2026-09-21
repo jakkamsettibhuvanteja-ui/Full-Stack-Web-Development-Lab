@@ -1,0 +1,2 @@
+This file was created using the Node.js File System module.
+The fs module can create, read and append files.
