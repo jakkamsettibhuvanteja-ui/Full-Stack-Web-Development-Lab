@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>MongoDB + Express.js + Node.js</p>
+    </header>
+
+
+    <main>
+
+        <!-- ADD STUDENT -->
+
+        <section class="card">
+
+            <h2>Add Student</h2>
+
+            <div class="form-grid">
+
+                <input
+                    id="rollNo"
+                    type="text"
+                    placeholder="Roll Number"
+                >
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                >
+
+                <input
+                    id="branch"
+                    type="text"
+                    placeholder="Branch"
+                >
+
+                <input
+                    id="year"
+                    type="number"
+                    placeholder="Year"
+                    min="1"
+                    max="4"
+                >
+
+                <input
+                    id="marks"
+                    type="number"
+                    placeholder="Marks"
+                    min="0"
+                    max="100"
+                >
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                >
+
+            </div>
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+        </section>
+
+
+        <!-- DISPLAY / FILTER -->
+
+        <section class="card">
+
+            <h2>Display & Filter</h2>
+
+            <div class="button-grid">
+
+                <button onclick="getAllStudents()">
+                    Display All
+                </button>
+
+                <button onclick="getAbove75()">
+                    Marks &gt; 75
+                </button>
+
+                <button onclick="getAbove80()">
+                    Marks &gt; 80
+                </button>
+
+                <button onclick="getBelow50()">
+                    Marks &lt; 50
+                </button>
+
+                <button onclick="getSortedStudents()">
+                    Sort Marks ↓
+                </button>
+
+                <button onclick="getHighest()">
+                    Highest Marks
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH BY ROLL -->
+
+        <section class="card">
+
+            <h2>Search Student</h2>
+
+            <div class="input-row">
+
+                <input
+                    id="searchRoll"
+                    type="text"
+                    placeholder="Enter Roll Number"
+                >
+
+                <button onclick="searchByRoll()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="input-row">
+
+                <input
+                    id="searchBranch"
+                    type="text"
+                    placeholder="Enter Branch"
+                >
+
+                <button onclick="searchByBranch()">
+                    Search Branch
+                </button>
+
+            </div>
+
+
+            <div class="input-row">
+
+                <input
+                    id="conditionMarks"
+                    type="number"
+                    placeholder="Marks greater than"
+                >
+
+                <input
+                    id="conditionYear"
+                    type="number"
+                    placeholder="Year"
+                    min="1"
+                    max="4"
+                >
+
+                <button onclick="searchCondition()">
+                    Search Condition
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- UPDATE -->
+
+        <section class="card">
+
+            <h2>Update Student</h2>
+
+            <div class="input-row">
+
+                <input
+                    id="updateRoll"
+                    type="text"
+                    placeholder="Roll Number"
+                >
+
+                <input
+                    id="updateMarks"
+                    type="number"
+                    placeholder="New Marks"
+                    min="0"
+                    max="100"
+                >
+
+                <button onclick="updateMarks()">
+                    Update Marks
+                </button>
+
+            </div>
+
+
+            <div class="input-row">
+
+                <input
+                    id="updateDetailsRoll"
+                    type="text"
+                    placeholder="Roll Number"
+                >
+
+                <input
+                    id="updateEmail"
+                    type="email"
+                    placeholder="New Email"
+                >
+
+                <input
+                    id="updateBranch"
+                    type="text"
+                    placeholder="New Branch"
+                >
+
+                <button onclick="updateDetails()">
+                    Update Email / Branch
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DELETE -->
+
+        <section class="card">
+
+            <h2>Delete Student</h2>
+
+            <div class="input-row">
+
+                <input
+                    id="deleteRoll"
+                    type="text"
+                    placeholder="Enter Roll Number"
+                >
+
+                <button
+                    class="danger"
+                    onclick="deleteStudent()"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section class="card">
+
+            <div class="result-header">
+
+                <h2>Students</h2>
+
+                <button onclick="getAllStudents()">
+                    Refresh
+                </button>
+
+            </div>
+
+            <div id="message"></div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Branch</th>
+                            <th>Year</th>
+                            <th>Marks</th>
+                            <th>Email</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
